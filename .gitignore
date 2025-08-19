@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /server/node_modules
 /server/.pnp
@@ -25,23 +23,26 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/cliente/node_modules
-/cliente/.pnp
-/cliente/.pnp.js
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
 
 # testing
-/cliente/coverage
+/client/coverage
 
 # production
-/cliente/build
+/client/build
 
 # misc
-/cliente/.DS_Store
-/cliente/.env.local
-/cliente/.env.development.local
-/cliente/.env.test.local
-/cliente/.env.production.local
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
 
-/cliente/npm-debug.log*
-/cliente/yarn-debug.log*
-/cliente/yarn-error.log*
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
+
+# Secrets
+*.env
