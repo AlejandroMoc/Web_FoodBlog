@@ -16,8 +16,6 @@ Before you begin, it is important to have the following:
 
    It is necessary to make sure that PostgreSQL server is running.
 
-   For example, on Artix Linux with OpenRC:
-
    ```bash
 
    # Install PostgreSQL
@@ -29,8 +27,13 @@ Before you begin, it is important to have the following:
    sudo chown -R postgres:postgres /var/lib/postgresql
    sudo -u postgres initdb -D /var/lib/postgresql/data
 
+   # For OpenRC
    sudo rc-update add postgresql default
    sudo rc-service postgresql start
+
+   # For systemctl
+   sudo systemctl enable postgresql
+   sudo systemctl start postgresql
    ```
 
 2. **Create the database**:
@@ -66,8 +69,13 @@ Before you begin, it is important to have the following:
    ```bash
    yay -S pgadmin4-server-bin pgadmin4-desktop-bin
 
+   # For OpenRC
    sudo rc-update add postgresql default
    sudo rc-service postgresql start
+
+   # For systemctl
+   sudo systemctl enable postgresql
+   sudo systemctl start postgresql
    ```
 
    Once installed, run pgAdmin 4:
