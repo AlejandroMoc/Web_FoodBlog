@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 // Import sites
 import Home from './sites/Home.js';
@@ -9,17 +9,14 @@ import Contact from './sites/Contact.js';
 // Import components
 import Post from './components/Post.js';
 import Author from './components/Author.js';
+import Navbar from './components/Navbar.js';
 
 function App() {
   return (
     <div className="App">
 
       {/* Navbar */}
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/blog">Menu</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+      <Navbar></Navbar>
 
       {/* URLs */}
       <Routes>
