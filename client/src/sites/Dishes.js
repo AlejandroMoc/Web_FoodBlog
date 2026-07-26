@@ -1,13 +1,13 @@
-// Blog post page
+// Dishes page
 
-import './Blog.css';
+import './Dishes.css';
 import { SiteHeader } from '../components/basic/SiteHeader.js';
 
 import { CardList } from '../components/Cards.js';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-export default function Blog(){
+export default function Dishes(){
     
     const [filterText, setFilterText] = useState("");
     const [data, setData] = useState([{id_post: 0, title: "", date: "", text: "", image: "", id_author: "0"}])
@@ -30,7 +30,7 @@ export default function Blog(){
     
     return(
         <>
-            <SiteHeader headerText="Blog" />
+            <SiteHeader headerText="Dishes" />
 
             {/* Search div wrapper */}
             <div className="searchWrapper">

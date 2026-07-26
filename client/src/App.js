@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 // Import sites
 import Home from './sites/Home.js';
 import Post from './sites/Post.js';
-import Blog from './sites/Blog.js';
+import Dishes from './sites/Dishes.js';
 import Contact from './sites/Contact.js';
 
 // Import components
@@ -21,7 +21,7 @@ function App() {
       {/* URLs */}
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/blog" element={<Blog></Blog>}></Route>
+        <Route path="/blog" element={<Dishes></Dishes>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
 
         {/* Posts and authors */}
