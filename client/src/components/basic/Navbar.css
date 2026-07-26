@@ -4,6 +4,8 @@
   background-color: darkslateblue;
   display: flex;
   justify-content: center;
+  height: 4rem;
+  gap: 1rem;
 }
 
 .navbar a{
@@ -11,12 +13,11 @@
   color:beige;
   text-decoration: none;
   font-size: 1.4rem;
-  padding: 0.8rem 2rem;
 }
 
 
-/* Site header */
 .siteHeader {
   text-align: left;
   padding-left: 10rem;
+  font-size: 2.5rem;
 }

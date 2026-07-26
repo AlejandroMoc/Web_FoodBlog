@@ -7,9 +7,9 @@ import Blog from './sites/Blog.js';
 import Contact from './sites/Contact.js';
 
 // Import components
+import Navbar from './components/basic/Navbar.js';
 import Post from './components/Post.js';
 import Author from './components/Author.js';
-import Navbar from './components/Navbar.js';
 
 function App() {
   return (
