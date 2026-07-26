@@ -20,7 +20,14 @@ export function Card({id_post, dish_image, dish_title, dish_desc, dish_date }){
             <div className="card">
 
                 {/* Show image if it exists */}
-                {dish_image && <img className="cardImg" src={require("../img/"+dish_image+".jpg")} alt=""></img>}
+                {dish_image && (
+                    <img
+                        className="cardImg"
+                        src={`${process.env.PUBLIC_URL}/img/${dish_image}.jpg`}
+                        alt=""
+                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                )}
 
                 {/* Dish title and description */}
                 <h2 className="cardTitle">{dish_title}</h2>

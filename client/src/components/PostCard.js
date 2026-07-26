@@ -17,7 +17,14 @@ export default function PostCard({post, autor}){
 
             {/* Post title and image */}
             <h1>{post.title}</h1>
-            {post.image && <img src={require("../img/"+post.image+".jpg")} alt =""></img>}
+            {post.image && (
+            <img
+                src={`${process.env.PUBLIC_URL}/img/${post.image}.jpg`}
+                alt=""
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}
+            />
+            )}
+
 
             {/* Author, date and description */}
             <Link to={"/autor/" + post.id_author}>
