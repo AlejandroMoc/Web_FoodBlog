@@ -24,7 +24,7 @@ function App() {
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
 
-        {/*Para llevar a un parámetro en específico*/}
+        {/* Posts and authors */}
         <Route path="/blog/:id_post" element={<Post></Post>}></Route>
         <Route path="/autor/:id_author" element={<Author></Author>}></Route>
       </Routes>
