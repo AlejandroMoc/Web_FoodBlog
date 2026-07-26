@@ -1,5 +1,10 @@
+// Contact page
+
+import { SiteHeader } from '../components/basic/SiteHeader.js';
+
+
 export default function Contact(){
     return(
-        <h1 className="siteHeader">Contact</h1>
+        <SiteHeader headerText="Contact" />
     );
 }

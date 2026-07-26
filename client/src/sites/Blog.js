@@ -1,4 +1,7 @@
-//Pagina de blog
+// Blog post page
+
+import './Blog.css';
+import { SiteHeader } from '../components/basic/SiteHeader.js';
 
 import { CardList } from '../components/Cards.js';
 import { useState } from 'react';
@@ -27,11 +30,16 @@ export default function Blog(){
     
     return(
         <>
-            <h1 className="siteHeader">Menu</h1>
-            <div>
+            <SiteHeader headerText="Blog" />
+
+            {/* Search div wrapper */}
+            <div className="searchWrapper">
                 <p>Search by dish title</p>
-                <input type="text" value={filterText} onChange={handleChange}></input>
+                <input className="searchInput" type="text" value={filterText} onChange={handleChange}>
+                </input>
             </div>
+
+            {/* Post List */}
             <CardList posts={data} text={filterText}></CardList>
         </>
     );
