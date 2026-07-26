@@ -1,0 +1,28 @@
+/* Card */
+.card{
+    background-color: beige;
+    display: inline-table;
+    margin: 1rem;
+    width: 20%;
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cardImg {
+  box-sizing: border-box; 
+  width: 90%;
+  height: 15rem;
+  object-fit: cover;
+  padding: 1.5rem;
+  border-radius: 2rem;
+}
+
+.cardTitle{
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.cardDesc {
+    color: black;
+}

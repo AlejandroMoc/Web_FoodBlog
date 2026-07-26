@@ -174,8 +174,8 @@ The frontend is a React application.
 
 4. **Access the application**:
 
-This will automatically open a new tab in your web browser. 
-If it doesn't, you can access it at [http://localhost:3000](http://localhost:3000).
+   This will automatically open a new tab in your web browser. 
+   If it doesn't, you can access it at [http://localhost:3000](http://localhost:3000).
 
 ---
 
