@@ -3,12 +3,12 @@ import {Routes, Route} from 'react-router-dom';
 
 // Import sites
 import Home from './sites/Home.js';
+import Post from './sites/Post.js';
 import Blog from './sites/Blog.js';
 import Contact from './sites/Contact.js';
 
 // Import components
 import Navbar from './components/basic/Navbar.js';
-import Post from './components/Post.js';
 import Author from './components/Author.js';
 
 function App() {
