@@ -43,7 +43,7 @@ app.get('/autor/:id_author',(req, res) => {
     })
 })
 
-//Ge an individual post
+//Get an individual post
 app.get('/posts/:id_post',(req, res) => {
     //"one" instead of "any" because we only want 1 id
     //parameters received in brackets

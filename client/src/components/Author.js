@@ -11,10 +11,20 @@ export default function Author(){
         .then((data) => setPost(data));
     }, [id_author])
 
+    // Format the date safely
+    const formattedAuthorDate = autor.date_of_birth
+        ? new Date(autor.date_of_birth).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            timeZone: 'UTC'
+          })
+        : '';
+
     return(
         <div className="card">
             <h1>{autor.name} {autor.lastname}</h1>
-            <h2>{autor.date_of_birth}</h2>
+            <h2>{formattedAuthorDate}</h2>
             <p>{autor.email}</p>
             <p>{autor.phone_number}</p>
         </div>

@@ -4,21 +4,36 @@ import './Cards.css';
 import { Link } from "react-router-dom";
 
 export function Card({id_post, dish_image, dish_title, dish_desc, dish_date }){
+
+    // Format the date safely
+    const formattedDishDate = dish_date 
+        ? new Date(dish_date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            timeZone: 'UTC'
+          })
+        : '';
+
     return (
         <Link to={"/blog/" + id_post}>
             <div className="card">
 
-            {/* Show image if it exists */}
-            {dish_image && <img className="cardImg" src={require("../img/"+dish_image+".jpg")} alt=""></img>}
+                {/* Show image if it exists */}
+                {dish_image && <img className="cardImg" src={require("../img/"+dish_image+".jpg")} alt=""></img>}
 
-            {/* Dish information */}
-            <h2 className="cardTitle">{dish_title}</h2>
-            <h3 className="cardDesc">{dish_desc}</h3>
-            <p>{dish_date}</p>
+                {/* Dish title and description */}
+                <h2 className="cardTitle">{dish_title}</h2>
+                <h3 className="cardDesc">{dish_desc}</h3>
+
+                {/* Display the clean formatted date */}
+                {formattedDishDate && <p className="cardDate">{formattedDishDate}</p>}
+                
             </div>
         </Link>
     );
 }
+
 
 export function CardList({posts, text}){
     const list = posts.map(post =>
